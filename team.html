@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Semex - Meet the Team</title>
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+   <style>
+      /* Navbar styling */
+      .logo img {
+         width: 100px;
+         margin-left: 100px;
+         margin-top: -26px;
+      }
+
+      /* General styling */
+      body {
+         margin: 0;
+         font-family: Arial, sans-serif;
+         background-color: #222;
+         color: #333;
+      }
+
+      .team-member {
+         background-color: #333;
+         color: white;
+         padding: 20px;
+         margin: 15px;
+         text-align: center;
+         border-radius: 8px;
+      }
+
+      .team-member img {
+         width: 150px;
+         height: 150px;
+         border-radius: 50%;
+         margin-bottom: 15px;
+      }
+
+      .team-member h3 {
+         font-size: 1.5rem;
+         margin: 10px 0;
+      }
+
+      .team-member p {
+         font-size: 1rem;
+         margin-bottom: 10px;
+      }
+
+      /* Typing animation styles */
+      .typewriter {
+         display: inline-block;
+         overflow: hidden;
+         border-right: 2px solid white;
+         white-space: nowrap;
+         font-size: 1.5rem;
+         width: 0;
+         animation: typing 6s steps(60, end), blink 0.6s step-end infinite, stopTyping 0s 6s forwards;
+         margin-top: 150px;
+         font-family: 'Courier New', Courier, monospace;
+         font-size: 28px;
+      }
+
+      @keyframes typing {
+         from {
+            width: 0;
+         }
+         to {
+            width: 98ch;
+         }
+      }
+
+      @keyframes blink {
+         from, to {
+            border-color: transparent;
+         }
+         50% {
+            border-color: white;
+         }
+      }
+
+      @keyframes stopTyping {
+         0% {
+            width: 98ch;
+         }
+         100% {
+            width: 98ch;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <!-- Header -->
+   <div class="header">
+      <div class="container-fluid">
+         <div class="row d_flex">
+            <div class=" col-md-2 col-sm-3 col logo_section">
+               <div class="full">
+                  <div class="center-desk">
+                     <div class="col-6 col-md-3 col-xl-4  d-block" style="color: white;">
+                        <h1 class="mb-0 site-logo" style="color: white;">
+                           <a href="index.html" class="text-black h2 mb-0">SEMEX<span class="text-primary">.</span></a>
+                         </h1>
+                        </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-8 col-sm-12">
+               <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarsExample04">
+                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                           <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                           <a class="nav-link" href="team.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="https://github.com/epfl-ada/ada-2024-project-semex24/tree/main">Research</a>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+            </div>
+            
+         </div>
+      </div>
+      
+   </div>
+   <!-- End Header -->
+
+   <!-- Main Content -->
+
+   <div class="photo-container text-center ">
+      <img src="teampic2.png" alt="Team Banner" class="img-fluid" style="max-width: 100%; ">
+   </div>
+
+   <div class="typing-container text-center my-4">
+      <div class="typewriter">
+         <div class="typewriter-text">Meet the talented individuals behind our team...</div>
+      </div>
+   </div>
+
+
+   <!-- Main Content -->
+   <div class="container">
+      <div class="row">
+         <!-- Team Members -->
+         <div class="col-md-4">
+            <div class="team-member">
+               <img src="pamelin.png" alt="Team Member 1">
+               <h3>Daniela Alvarez</h3>
+               <p>Exchange studend from Mexico studying Data Science and Mathematics engineering.</p>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="team-member">
+               <img src="quiroz.png" alt="Team Member 2">
+               <h3>Andrea Quiroz Ortega</h3>
+               <p>Exchange studend from Mexico studying Data Science and Mathematics engineering.</p>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="team-member">
+               <img src="marija.png" alt="Team Member 3">
+               <h3>Marija Rakonjac</h3>
+               <p>EPFL student from Serbia pursuing the master's degree in Management and Technology.</p>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="team-member">
+               <img src="eugenio.png" alt="Team Member 4">
+               <h3>Eugenio Trevino</h3>
+               <p>Exchange studend from Mexico studying Robotics and Mathematics engineering.</p>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="team-member">
+               <img src="milica.png" alt="Team Member 5">
+               <h3>Milica Vukasinovic</h3>
+               <p>EPFL student from Serbia pursuing the master's degree in electrical engineering.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   
+
+   <!-- Javascript files -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="script.js"></script>
+
+   <style>
+      /* Typing animation styles */
+      .typewriter {
+         display: inline-block;
+         overflow: hidden;
+         border-right: 2px solid white;
+         white-space: nowrap;
+         font-size: 1.5rem;
+         width: 0;
+         animation: typing 6s steps(60, end), blink 0.6s step-end infinite, stopTyping 0s 6s forwards;
+         margin-top: 0;
+         font-family: 'Courier New', Courier, monospace;
+         font-size: 28px;
+         color: white; /* White color for the text */
+      }
+
+      @keyframes typing {
+         from {
+            width: 0;
+         }
+         to {
+            width: 98ch;
+         }
+      }
+
+      @keyframes blink {
+         from, to {
+            border-color: transparent;
+         }
+         50% {
+            border-color: white;
+         }
+      }
+
+      @keyframes stopTyping {
+         0% {
+            width: 98ch;
+         }
+         100% {
+            width: 98ch;
+         }
+      }
+   </style>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Semex</title>
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+   <style>
+      /* Navbar styling */
+      .logo img {
+      width: 100px;  /* Set the width you want for the logo */
+      margin-left: 100px;
+      margin-top: -26px;
+      }
+      
+
+      /* Image shaking animation */
+      @keyframes intense-shake {
+         0% {
+            transform: rotate(2deg);
+         }
+         25% {
+            transform: rotate(-2deg);
+         }
+         50% {
+            transform: rotate(3deg);
+         }
+         75% {
+            transform: rotate(-3deg);
+         }
+         100% {
+            transform: rotate(2deg);
+         }
+      }
+
+      .shake-on-hover {
+         transition: transform 0.2s ease;
+      }
+
+      .shake-on-hover:hover {
+         animation: intense-shake 0.5s infinite;
+      }
+
+      /* Center and resize the rocket2 image */
+      .canvas figure {
+         display: flex;           /* Use flexbox to center the image */
+         justify-content: center; /* Horizontally center the image */
+         align-items: center;     /* Vertically center the image */
+         height: 80vh;            /* Full viewport height */
+         margin: 0;               /* Remove default figure margin */
+      }
+
+      .canvas img {
+         transition: transform 0.2s ease;  /* Optional transition for smooth hover effect */
+      }
+      /* General styling */
+      body {
+         margin: 0;
+         font-family: Arial, sans-serif;
+         }
+
+      
+      /* Body background and text color */
+      body {
+         background-color: #222;  /* Light gray for body background */
+         color: #333;  /* Dark gray for text */
+      }
+
+      .full_bg {
+         background-color: #222;  /* Light gray for full_bg section */
+      }
+
+      .canvas i{
+         position: absolute;
+         top: -150px;
+         background: rgba(255,255,255,.5);
+         width: 100%;  /* Ensure it spans the full width */
+         height: 100vh;  /* Make it occupy the full height of the viewport */
+         animation: sanimate linear infinite;
+         
+      }
+
+
+      @keyframes sanimate{
+         0%{
+            transform: translateY(0);
+         }
+
+         100%{
+            transform: translateY(100vh);
+         }
+      }
+
+      .rocket{
+         animation: ranimate 0.15s ease infinite;
+      }
+
+
+      
+
+      @keyframes ranimate{
+         0%,100%{
+            transform: translateY(-6px);
+         }
+
+         50%{
+            transform: translateY(6px);
+         }
+      }
+
+      /* Style for the container */
+      .typing-container {
+      width: 100%; /* Adjust width as needed */
+      padding: 20px; /* Optional padding */
+      text-align: center; /* Center align the text */
+      color: white;
+      display: flex; /* Use flexbox to control vertical alignment */
+      justify-content: center; /* Horizontally center the content */
+      align-items: flex-start; /* Align content to the top */
+      min-height: 200px; /* Add a minimum height to give space above the text */
+      }
+
+      /* Typing animation styles */
+      .typewriter {
+      display: inline-block; /* Keep the typewriter effect to the content size */
+      overflow: hidden; /* Hides text outside the container */
+      border-right: 2px solid white; /* Mimics the cursor */
+      white-space: nowrap; /* Prevents text wrapping */
+      font-size: 1.5rem; /* Adjust font size */
+      width: 0; /* Initially, no visible text */
+      animation: typing 6s steps(60, end), blink 0.6s step-end infinite, stopTyping 0s 6s forwards;
+      margin-top: 150px; /* Adjust this to move the text down */
+      font-family: 'Courier New', Courier, monospace; /* Set your preferred font */
+      font-size: 28px; /* Adjust the font size */
+      }
+
+      @keyframes typing {
+      from {
+         width: 0; /* Start with no text visible */
+      }
+      to {
+         width: 98ch; /* Match the character length of the text */
+      }
+      }
+
+      @keyframes blink {
+      from, to {
+         border-color: transparent; /* Hides the cursor */
+      }
+      50% {
+         border-color: white; /* Shows the cursor */
+      }
+      }
+
+      @keyframes stopTyping {
+      0% {
+         width: 98ch; /* Keep the width of the text as fully visible */
+      }
+      100% {
+         width: 98ch; /* Maintain the fully visible text */
+      }
+      }
+
+
+
+
+
+   
+   </style>
+</head>
+
+<body>
+   <!-- Header -->
+   <div class="header">
+      <div class="container-fluid">
+         <div class="row d_flex">
+            <div class=" col-md-2 col-sm-3 col logo_section">
+               <div class="full">
+                  <div class="center-desk">
+                     <div class="col-6 col-md-3 col-xl-4  d-block" style="color: white;">
+                        <h1 class="mb-0 site-logo" style="color: white;">
+                           <a href="index.html" class="text-black h2 mb-0">SEMEX<span class="text-primary">.</span></a>
+                         </h1>
+                        </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-8 col-sm-12">
+               <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarsExample04">
+                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                           <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="team.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="https://github.com/epfl-ada/ada-2024-project-semex24/tree/main">Research</a>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+            </div>
+            
+         </div>
+      </div>
+      
+   </div>
+   <!-- End Header -->
+
+   <!-- Main Content -->
+   
+  
+   <div class="typing-container">
+      <div class="typewriter">
+         <div class="typewriter-text">Hello, welcome to our story of Cinema Through Time. Click on the rocket to travel through time ...</div>
+      </div>
+    </div>
+    
+   <div class="canvas">
+      <div class="row">
+         <div class="col-md-12">
+            <figure>
+                  <img class="shake-on-hover" src="images/rocket5.png" alt="Rocket Image">
+            </figure>
+         </div>
+      </div>
+   </div>
+
+   <audio autoplay>
+      <source src="audio2.mp3">
+   </audio>
+
+
+   
+
+
+
+   <!-- Javascript files -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>

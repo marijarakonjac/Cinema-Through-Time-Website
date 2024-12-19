@@ -1,0 +1,86 @@
+/* Timeline Styling */
+.timeline-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  overflow-x: auto;
+  font-family: 'Poppins', sans-serif;
+  scrollbar-width: none;
+}
+
+.timeline::-webkit-scrollbar {
+  display: none;
+}
+
+.timeline-item {
+  background: #f0390f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+.timeline-item:hover {
+  background: #3e0bce;
+  transform: scale(1.1);
+}
+
+.timeline-item.active {
+  background: #3e0bce;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(62, 11, 206, 0.4);
+}
+
+/* Navigation Styling */
+.navigation {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+.nav-arrow {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-arrow:hover {
+  background-color: #0056b3;
+}
+
+.content-area {
+  text-align: center;
+  margin: 20px;
+}
+
+.page1-arrow-right {
+  position: absolute;
+  right: 10px; /* Positioning it to the right edge of the page */
+}

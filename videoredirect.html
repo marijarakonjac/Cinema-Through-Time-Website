@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Redirect</title>
+</head>
+<body>
+  <!-- Video Element -->
+  <video id="introVideo" width="800" height="450" controls autoplay>
+    <source src="countdown.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    // Get the video element
+    const video = document.getElementById('introVideo');
+
+    // Listen for the 'ended' event
+    video.addEventListener('ended', function() {
+      // Redirect to the desired HTML page
+      window.location.href = "timecode/index2.html";
+    });
+
+    // Optional: Start playing the video automatically
+    video.play();
+  </script>
+</body>
+</html>
