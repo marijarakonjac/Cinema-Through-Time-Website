@@ -49,7 +49,7 @@
       }
 
       .markdown {
-        font-size: 18px;
+        font-size: 20px;
         font-family: 'Courier New', Courier, monospace;
       }
 
@@ -244,6 +244,166 @@
 
       </div>
 
+      <div class="row mb-5" data-aos="fade-up">
+        <div class="col-12">
+        </br>
+          <p>We have seen on one of the previous boxplots that movies released in summer get more revenue, followed by movies released in winter. 
+            Is this a coincidence, or is there an actual pattern here? Let's test this!
+          </p>     
+      </div>
+    </div>
+  </div>
+    <div>
+      <div class="site-section bg-light">
+          <div class="container">
+          <div  data-aos="fade-up">
+              <div class="col-12">
+                  <h3 class="text-black">Revenue Analysis </h3>
+                  <p>We performed an OLS regression to examine how season affects movie revenue, using autumn as the reference season:</p>
+                  <ul>
+                    <li>Spring movies show a $2.08M increase in revenue, but with a p-value of 0.166, this difference is not statistically significant.</li>
+                    <li>Summer movies earn $5.2M more, with a p-value of 0.001, which is statistically significant, indicating higher revenue compared to autumn.</li>
+                    <li>Winter movies earn $4.4M more, with a p-value of 0.004, also statistically significant.</li>
+                </ul>  
+                <p>However, the R-squared value of 0.002 shows that only 0.2% of the revenue variance is explained by the season, meaning other factors like budget likely play a bigger role.</p>
+                <div class="row mb-5" data-aos="fade-left" data-aos-delay="100">
+                  <div class="col-12">
+                      <div class="d-flex justify-content-center my-4">
+                          <img src="revenueData.png"  class="img-fluid">
+                        </div>
+                  </div>
+                </div>   
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="temp" style="margin-top: 40px; margin-bottom: 0.5rem; ">
+          <div class="container">
+          <div  data-aos="fade-up">
+              <div class="col-12">
+                  <h3 class="text-black">Popularity Analysis </h3>
+                  <p>For popularity, we again used autumn as the baseline season:</p>
+                  <ul>
+                    <li>Spring movies have a -0.1056 coefficient, with a p-value of 0.033, indicating slightly lower popularity, which is statistically significant.</li>
+                    <li>Summer movies show a small -0.05 coefficient with a p-value of 0.327, meaning the difference is not statistically significant.</li>
+                    <li>Winter movies have a -0.56 coefficient and a p-value of 0.000, suggesting a significant drop in popularity.</li>
+                </ul>  
+                <p>The R-squared value of 0.004 means that season explains only 0.4% of the popularity variance, highlighting that factors like marketing and content quality are likely more influential.</p>
+                <div class="row mb-5" data-aos="fade-right" data-aos-delay="100">
+                  <div class="col-12">
+                      <div class="d-flex justify-content-center my-4">
+                          <img src="popularityData.png"  class="img-fluid">
+                        </div>
+                  </div>
+                </div>   
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="site-section bg-light">
+          <div class="container">
+          <div  data-aos="fade-up">
+              <div class="col-12">
+                  <p>The R-squared value of 0.004 means that season explains only 0.4% of the popularity variance, highlighting that factors like marketing and content quality are 
+                    likely more influential.</p>    
+                <p>After reviewing how the season affects revenue and popularity, we would like to delve deeper into genres. Are certain genres more frequently released in certain seasons? 
+                  Let's investigate this!</p>
+                <p class="markdown">T-statistic: 0.827878259701446, p-value: 0.4079757121240083</p>        
+              </div>
+          </div>
+
+          <div  data-aos="fade-up">
+            <div class="col-12">
+              <p>Since the p-value is p=1.18*10^{-62}, we can conclude that the result is statistically significant. We have strong evidence to reject the null hypothesis, which is 
+                  that there is no relationship between season and genre of the movie.</p>    
+              <p>Do movies in some genres tend to perform better (have higher revenue and popularity) in certain seasons? We can look at the mean values for these variables:</p>
+              <p class="markdown">   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;genres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;season&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;revenue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;popularity<br>
+                0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Autumn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.004626e+07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.979326<br>
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.531787e+07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.179583<br>
+                2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Summer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.454332e+07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.151282<br>
+                3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Winter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.398693e+07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.802313<br>
+                4&nbsp;&nbsp;&nbsp;&nbsp;Adventure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Autumn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.648293e+07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.892521<br>
+                </p>
+            </div>
+        </div>
+
+
+        <div  data-aos="fade-up">
+          <div class="col-12">
+          </br>
+        </br>
+            <p>Let's plot this more concisely:</p>  
+          </div>
+      </div>
+
+
+      <div data-aos="fade-left" data-aos-delay="200">
+        <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
+            <div id="thumbnailCarousel42" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="seasonphotos/pic10.png">
+                </div>
+                <div class="carousel-item">
+                  <img src="seasonphotos/pic11.png">
+                </div>
+                
+              </div>
+              <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
+                <img src="seasonphotos/pic10.png" class="img-thumbnail" data-target="#thumbnailCarousel42" data-slide-to="0" style="width: 100px; cursor: pointer;">
+                <img src="seasonphotos/pic11.png" class="img-thumbnail" data-target="#thumbnailCarousel42" data-slide-to="1" style="width: 100px; cursor: pointer;">                
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <div  data-aos="fade-up">
+        <div class="col-12">
+        </br>
+      </br>
+          <p>What can easily catch our eye is that Fantasy and Science fiction movies have way bigger average revenue in spring, comparing to other seasons. Why is that? Let's test it first:</p> 
+          <p class="markdown">T-statistic: 0.827878259701446, p-value: 0.4079757121240083</p> 
+          <p>T-statistic (0.83): The T-statistic measures the size of the difference relative to the variation in your sample data. A value close to 0 indicates that there is 
+            little difference between the two groups.</p>
+          <p>p-value (0.41): The p-value tells you the probability of observing the data if the null hypothesis (no difference between the groups) were true. 
+            Since the p-value is greater than 0.05, we fail to reject the null hypothesis at a 5% significance level.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="temp" style="margin-top: 40px; margin-bottom: 0.5rem; ">
+        <div class="container">
+        <div  data-aos="fade-up">
+            <div class="col-12">
+              <p>We can do one more regression, to check if some of revenue variability is actually explained by a model (that considers genres and seasons, and their relationship):</p>
+              <div class="row mb-5" data-aos="fade-right" data-aos-delay="100">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center my-4">
+                        <img src="multipleregressions.png"  class="img-fluid">
+                      </div>
+                </div>
+              </div>  
+              <p>The regression model aimed to analyze how genre and season affect movie revenue, with an R-squared value of 0.028, indicating a weak explanatory power. 
+                The results revealed that spring and summer seasons significantly impact revenue, particularly for genres like Family, Fantasy, and Adventure. 
+                Notable coefficients include higher revenues for Family and Fantasy genres across seasons, and some negative impacts in genres like Horror, Drama, 
+                and Musical during certain seasons. However, most interactions between genres and seasons, such as those for Comedy, Crime, and Documentary, showed insignificant effects, 
+                with p-values above the typical threshold of 0.05.</p> 
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     </div>
       <div class="site-section bg-light">
@@ -368,563 +528,206 @@
     </div>
 
 
-
+    <div  data-aos="fade-up">
+      <div class="col-12">
+          <p>Revenue doesn't tell us much but average sum of movies released in December has a noticeably high peak which confirms are assumptions.
+             Now, we are using linear regression to see if there exists a trend concerning revenue and number of movies with release month. </p>
+          <p class="markdown">Slope: 1338055.2480868609<br>
+            Intercept: 33942667.768323965<br>
+            R-squared: 0.03791846928694063<br>
+            P-value: 0.5442057670970595<br></p>
+          <p>In the first analysis, the p-value is greater than 0.5, indicating that the correlation between the release month and revenue is not statistically significant. 
+            However, in the second analysis, where we examined the correlation between the number of family movies and the release month, the correlation is statistically significant.</p>
+          <p class="markdown">Slope: 5.909090909090908<br>
+            Intercept: 132.75757575757575<br>
+            R-squared: 0.48338266657670315<br>
+            P-value: 0.012067713219175115<br></p>
+      </div>
     </div>
-  </div>
-
-
-    <div data-aos="fade-left" data-aos-delay="200">
-      <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
-          <div id="thumbnailCarousel20" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="seasonphotos/pic12.png">
-              </div>
-              <div class="carousel-item">
-                <img src="seasonphotos/pic13.png">
-              </div>
-            </div>
-            <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
-              <img src="seasonphotos/pic12.png" class="img-thumbnail" data-target="#thumbnailCarousel20" data-slide-to="0" style="width: 100px; cursor: pointer;">
-              <img src="seasonphotos/pic13.png" class="img-thumbnail" data-target="#thumbnailCarousel20" data-slide-to="1" style="width: 100px; cursor: pointer;">                  
-            </div>
-          </div>
-        </div>
-    </div>
-
-    
-
 
 
     <div  data-aos="fade-up">
       <div class="col-12">
-      </br>
-        <p>The earlier plots show that most movies in our dataset were released after the 2000s, with a large number coming out in 
-          January of a specific year. Now, we’ll look at how holidays like Christmas, Halloween, and Valentine’s Day affect when movies are released. This will help us see if certain types of movies are more common around these holidays and how movie releases match seasonal trends and audience interests.
-        </p>
-      </br>
-     
+          <p>In the next section, we analyzed the entire year to identify potential trends.</p>
+          <div class="row mb-5" data-aos="fade-left" data-aos-delay="100">
+            <div class="col-12">
+                <div class="d-flex justify-content-center my-4">
+                    <img src="seasonphotos/pic16.png"  class="img-fluid">
+                  </div>
+            </div>
+          </div>
+          <p>The analysis shows al jump in movie releases around December 25th, highlighting a noticeable increase in the number of films arriving on Christmas Day. 
+            This pattern suggests that the film industry thoughtfully picks this special date to take advantage of the festive joy in the air and the rising interest in 
+            family-friendly and feel-good movies during the holidays.</p>
+          <p>This spike really emphasizes how important Christmas is for movie releases. It fits perfectly with the holiday's charm and the way families and friends come 
+            together to enjoy entertainment during this wonderful time. By launching films on Christmas Day, filmmakers are tapping into the excitement and making it easy for 
+            audiences to enrich their holiday celebrations with enjoyable films.
+          </p>
+        </br>
       </div>
-  </div>
-</div>
-</div>
-
-
-
-        <div class="row mb-5" data-aos="fade-left" data-aos-delay="100">
-          <div class="col-12">
-              <div class="d-flex justify-content-center my-4">
-                  <img src="seasonphotos/pic1.png"  class="img-fluid">
-                </div>
-          </div>
-        </div>
-
-        
-        <div data-aos="fade-right" data-aos-delay="300">
-            <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
-                <div id="thumbnailCarousel3" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="historicalphotos/pic4.png">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="historicalphotos/pic5.png">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="historicalphotos/pic6.png">
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
-                    <img src="historicalphotos/pic4.png" class="img-thumbnail" data-target="#thumbnailCarousel3" data-slide-to="0" style="width: 100px; cursor: pointer;">
-                    <img src="historicalphotos/pic5.png" class="img-thumbnail" data-target="#thumbnailCarousel3" data-slide-to="1" style="width: 100px; cursor: pointer;">
-                    <img src="historicalphotos/pic6.png" class="img-thumbnail" data-target="#thumbnailCarousel3" data-slide-to="2" style="width: 100px; cursor: pointer;">
-                  </div>
-                </div>
-              </div>
-    
-          </div>
-        </div>
     </div>
+    </div>
+  </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-          <div data-aos="fade-up">
-            <div class="container">
-                <div class="row justify-content-center text-center" style="margin-bottom: 0.5rem;" data-aos="fade-up"> <!-- Custom small margin -->
-                  <div class="col-7 text-center">
-                    <h2 class="section-title">Noise shown in early movies from Dataset and little amount of movies</h2>
-                  </div>
-                </div>
-              </div>
-              <div data-aos="fade-right" data-aos-delay="300"></div>
-              <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"  > <!-- Custom small margin -->
-                <div id="thumbnailCarousel1" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="historicalphotos/pic1.png">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="historicalphotos/pic2.png">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="historicalphotos/pic3.png">
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
-                    <img src="historicalphotos/pic1.png" class="img-thumbnail" data-target="#thumbnailCarousel1" data-slide-to="0" style="width: 100px; cursor: pointer;">
-                    <img src="historicalphotos/pic2.png" class="img-thumbnail mx-2" data-target="#thumbnailCarousel1" data-slide-to="1" style="width: 100px; cursor: pointer;">
-                    <img src="historicalphotos/pic3.png" class="img-thumbnail" data-target="#thumbnailCarousel1" data-slide-to="2" style="width: 100px; cursor: pointer;">
-                  </div>
-                </div>
-              </div>
-            </br>
-              <p>When we counted the number of movies made during major war periods, we found 1,500 films from 1914 to 1919, during World War I. For World War II, from 1939 to 1945, there were 2,892 movies, almost twice as many. This large difference means we have much more data to work with for World War II, which could lead to more useful results in our analysis.
-            </p>
-        </br>
-        </br>
-        </br>
-              </div>
-
-        </div>
-        <div class="site-section bg-light">
-            <div class="container">
-            <div  data-aos="fade-up">
-                <div class="col-12">
-                <h3>  </h3>
-                    <h3 class="text-black">World War II: Propaganda and the Triumph of Good vs. Evil </h3>
-                    <p>World War II solidified cinema's role as a powerful propaganda tool. Governments used film to rally support, inspire hope, and demonize enemies. 
-                        Hollywood, in particular, became a hub for patriotic storytelling, producing classics such as Casablanca (1942) and The Great Dictator (1940). 
-                        To see this projection over the war years we started by plotting the different genres comparing them to the Non-War period (1920-1938) and with 
-                        the average of genres overall on our Dataset. For a broader perspective we plotted the amount of movies per genre (frequency) as well as the percentage 
-                        each genre occupied with respect to all genres. We applied a log scale for better visualization.
-                    </p>              
-                </div>
-            </div>
-            <div class="row mb-5" data-aos="fade-left" data-aos-delay="100">
-              <div class="col-12">
-                  <div class="d-flex justify-content-center my-4">
-                      <img src="seasonphotos/pic1.png"  class="img-fluid">
-                    </div>
-              </div>
-            </div>
-
-            
-            <div data-aos="fade-right" data-aos-delay="300">
-                <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
-                    <div id="thumbnailCarousel3" class="carousel slide">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img src="historicalphotos/pic4.png">
-                        </div>
-                        <div class="carousel-item">
-                          <img src="historicalphotos/pic5.png">
-                        </div>
-                        <div class="carousel-item">
-                          <img src="historicalphotos/pic6.png">
-                        </div>
-                      </div>
-                      <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
-                        <img src="historicalphotos/pic4.png" class="img-thumbnail" data-target="#thumbnailCarousel3" data-slide-to="0" style="width: 100px; cursor: pointer;">
-                        <img src="historicalphotos/pic5.png" class="img-thumbnail" data-target="#thumbnailCarousel3" data-slide-to="1" style="width: 100px; cursor: pointer;">
-                        <img src="historicalphotos/pic6.png" class="img-thumbnail" data-target="#thumbnailCarousel3" data-slide-to="2" style="width: 100px; cursor: pointer;">
-                      </div>
-                    </div>
-                  </div>
-        
-              </div>
-            </div>
-        </div>
-
+  <div>
+    <div class="site-section bg-light">
         <div class="container">
-            <div class="row mb-5" data-aos="fade-up">
-                <div class="col-12">
-                    <h3 class="text-black" style="margin-top: 40px; margin-bottom: 10px;">War genre</h3>
-
-                  <p>Perhaps the most obvious choice, we wanted to show how the war genre behaved at this specific point in time and indeed we can see that our analysis 
-                    reveals a noticeable increase in the production of war movies during World War II, highlighting the genre's heightened relevance at the time. Across 
-                    the entire dataset, war movies make up 3.57% of all films. However, during World War I (1914–1918), they accounted for only 1.33%, while in World War II 
-                    (1939–1945), this figure rose significantly to 11.60%. In contrast, during the non war period (1920–1938), war films only made up 2.51% of the total.
-                  </p>              
-              </div>
-            </div>
-
-            <div data-aos="fade-left" data-aos-delay="200">
-                    <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
-                        <div id="thumbnailCarousel5" class="carousel slide">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <img src="historicalphotos/pic12.png">
-                            </div>
-                            <div class="carousel-item">
-                              <img src="historicalphotos/pic13.png">
-                            </div>
-                            <div class="carousel-item">
-                              <img src="historicalphotos/pic14.png">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="historicalphotos/pic15.png">
-                              </div>
-                            <div class="carousel-item">
-                                <img src="historicalphotos/pic16.png">
-                              </div>
-                          </div>
-                          <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
-                            <img src="historicalphotos/pic12.png" class="img-thumbnail" data-target="#thumbnailCarousel5" data-slide-to="0" style="width: 100px; cursor: pointer;">
-                            <img src="historicalphotos/pic13.png" class="img-thumbnail" data-target="#thumbnailCarousel5" data-slide-to="1" style="width: 100px; cursor: pointer;">
-                            <img src="historicalphotos/pic14.png" class="img-thumbnail" data-target="#thumbnailCarousel5" data-slide-to="2" style="width: 100px; cursor: pointer;">
-                            <img src="historicalphotos/pic15.png" class="img-thumbnail" data-target="#thumbnailCarousel5" data-slide-to="3" style="width: 100px; cursor: pointer;">
-                            <img src="historicalphotos/pic16.png" class="img-thumbnail" data-target="#thumbnailCarousel5" data-slide-to="4" style="width: 100px; cursor: pointer;">
-                          </div>
-                        </div>
-                      </div>
-            
-                  </div>
-
-
-
-
-
-
-
-            <div class="row mb-5" data-aos="fade-left" data-aos-delay="100">
+        <div  data-aos="fade-up">
+            <div class="col-12">
+                <h3 class="text-black">Horror movies vs Halloween</h3>
+                <p>The countplot of horror movies shows a significant spike in October, which aligns perfectly with Halloween. This suggests that the horror genre experiences a 
+                  surge in popularity during this time, likely due to the association with Halloween and people's tendency to seek out scary movies to match the spooky atmosphere of the holiday.</p>
+                <div class="row mb-5" data-aos="fade-left" data-aos-delay="100">
                 <div class="col-12">
                     <div class="d-flex justify-content-center my-4">
-                        <img src="historicalphotos/pic7.png" alt="Exploratory Analysis Results" class="img-fluid">
+                        <img src="seasonphotos/pic17.png"  class="img-fluid">
                       </div>
                 </div>
-              </div>
-
-              <div class="row mb-5" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-12">
-                    <p>Perhaps the most obvious choice, we wanted to show how the war genre behaved at this specific point in time and indeed we can see that our analysis 
-                        reveals a noticeable increase in the production of war movies during World War II, highlighting the genre's heightened relevance at the time. Across 
-                        the entire dataset, war movies make up 3.57% of all films. However, during World War I (1914–1918), they accounted for only 1.33%, while in World War II 
-                        (1939–1945), this figure rose significantly to 11.60%. In contrast, during the non war period (1920–1938), war films only made up 2.51% of the total.
-                      </p>              
-                      <p>To complement our analysis on war movies, we will evaluate countries individually, including those that played a major role in the war and those that were not involved.</p>
-                      <p>We want to consider the number of movies produced by each country, and since the United States has a significant advantage in this regard, we will primarily focus on the US. 
-                        We will also take a look at the UK, all the countries related to Germany, and India (as a non contributor to the war).</p>
-                      <p>The following images show the percentage of war movies over the years in the countries of the United States, United Kingdom, Germany and India (in that order).</p>
-                </div>
-              </div>
-
-              <div data-aos="fade-right" data-aos-delay="300">
-                <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
-                    <div id="thumbnailCarousel4" class="carousel slide">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img src="historicalphotos/pic8.png">
-                        </div>
-                        <div class="carousel-item">
-                          <img src="historicalphotos/pic9.png">
-                        </div>
-                        <div class="carousel-item">
-                          <img src="historicalphotos/pic10.png">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="historicalphotos/pic11.png">
-                          </div>
-                      </div>
-                      <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
-                        <img src="historicalphotos/pic8.png" class="img-thumbnail" data-target="#thumbnailCarousel4" data-slide-to="0" style="width: 100px; cursor: pointer;">
-                        <img src="historicalphotos/pic9.png" class="img-thumbnail" data-target="#thumbnailCarousel4" data-slide-to="1" style="width: 100px; cursor: pointer;">
-                        <img src="historicalphotos/pic10.png" class="img-thumbnail" data-target="#thumbnailCarousel4" data-slide-to="2" style="width: 100px; cursor: pointer;">
-                        <img src="historicalphotos/pic11.png" class="img-thumbnail" data-target="#thumbnailCarousel4" data-slide-to="3" style="width: 100px; cursor: pointer;">
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-
-            <div class="container">
-                <div class="row mb-5" data-aos="fade-up">
-                    <div class="col-12">
-                        <h3 class="text-black" style="margin-top: 40px; margin-bottom: 10px;">Other Genres</h3>
-    
-                      <p>Similar process for the other genres, below we show the percentage of the Crime, Mystery, Documentary, Action and Adventure genres:</p>              
-                  </div>
-                </div>
-    
-
-                  <div data-aos="fade-left" data-aos-delay="200">
-                    <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
-                        <div id="thumbnailCarousel5" class="carousel slide">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <img src="historicalphotos/pic12.png">
-                            </div>
-                            <div class="carousel-item">
-                              <img src="historicalphotos/pic13.png">
-                            </div>
-                            <div class="carousel-item">
-                              <img src="historicalphotos/pic14.png">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="historicalphotos/pic15.png">
-                              </div>
-                            <div class="carousel-item">
-                                <img src="historicalphotos/pic16.png">
-                              </div>
-                          </div>
-                          <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
-                            <img src="historicalphotos/pic12.png" class="img-thumbnail" data-target="#thumbnailCarousel5" data-slide-to="0" style="width: 100px; cursor: pointer;">
-                            <img src="historicalphotos/pic13.png" class="img-thumbnail" data-target="#thumbnailCarousel5" data-slide-to="1" style="width: 100px; cursor: pointer;">
-                            <img src="historicalphotos/pic14.png" class="img-thumbnail" data-target="#thumbnailCarousel5" data-slide-to="2" style="width: 100px; cursor: pointer;">
-                            <img src="historicalphotos/pic15.png" class="img-thumbnail" data-target="#thumbnailCarousel5" data-slide-to="3" style="width: 100px; cursor: pointer;">
-                            <img src="historicalphotos/pic16.png" class="img-thumbnail" data-target="#thumbnailCarousel5" data-slide-to="4" style="width: 100px; cursor: pointer;">
-                          </div>
-                        </div>
-                      </div>
-            
-                  </div>
-                </br>
-                  <p>Analyzing the relationship between WWII and various genres reveals distinct trends. Crime movies saw a gradual rise leading up to WWII, with a noticeable peak right after the war ended. Although the percentage increase during WWII (4.19%) was modest compared to the entire dataset (4.03%), it still exceeded that of non-war periods (2.13%). Mystery movies showed a clearer connection, with production percentages significantly increasing during WWII (8.13%) compared to WWI (0.73%) and non-war periods (4.72%), supported by a strong correlation (~0.6), indicating the war period's influence on the genre. Similarly, documentaries experienced a spike during WWII (3.98%), higher than both WWI (0.47%) and non-war periods (1.11%), with a moderate correlation (0.5), highlighting the war's impact on this genre. Action movies exhibited a distinct surge during WWII (13.11%), surpassing both WWI (1.33%) and non-war periods (7.82%), although they eventually grew beyond WWII levels over time. Adventure movies followed a different pattern, maintaining high percentages during both war periods, with a significant share during WWII (8.13%) compared to WWI (2.67%) and non-war periods (7.20%), indicating a steady but notable connection to the war period. These trends underline WWII's varying degrees of influence on different film genres, shaping their production in unique ways.
+              </div> 
+              <p class="markdown">
+                Comparison of October with Month 1: p-value = 0.30306883889016883<br>
+                Comparison of October with Month 2: p-value = 0.0006639977962069586<br>
+                Comparison of October with Month 3: p-value = 0.005476531674294278<br>
+                Comparison of October with Month 4: p-value = 0.0013931956530250625<br>
+                Comparison of October with Month 5: p-value = 0.015540013225062679<br>
+                Comparison of October with Month 6: p-value = 0.0009211192932808715<br>
+                Comparison of October with Month 7: p-value = 0.0027026699026941325<br>
+                Comparison of October with Month 8: p-value = 0.006303775660425627<br>
+                Comparison of October with Month 9: p-value = 0.08198779313833489<br>
+                Comparison of October with Month 11: p-value = 0.024503717087855793<br>
+                Comparison of October with Month 12: p-value = 0.0001503299436539879<br>
+                October has significantly more horror movie releases than the following months: [2, 3, 4, 5, 6, 7, 8, 11, 12]
                 </p>
-                </div>
-        </div>
-
-        <div class="site-section bg-light">
-            <div class="container">
-            <div  data-aos="fade-up">
-                <div class="col-12">
-                <h3>  </h3>
-                    <h3 class="text-black">The Space Race: A Leap into the Future </h3>
-                    <p>The mid-20th century brought tension all over the world, with the Space Race between the U.S. and the Soviet Union and with it, brought a surge in science fiction films. Movies like 2001: A Space Odyssey (1968) and Star Wars (1977) reflected society's fascination with the possibilities of space exploration. Because of this, we concentrated on the genre of Sci-Fi in this case.
-                    </p> 
-                    <p>On the following graph, the rise of Sci-Fi movies over the Cold War period can be displayed, which confirms our hypothesis. </p>      
-                    <div class="row mb-5" data-aos="fade-right" data-aos-delay="100">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-center my-4">
-                                <img src="historicalphotos/pic17.png" alt="Exploratory Analysis Results" class="img-fluid">
-                              </div>
-                        </div>
-                      </div>   
-                      
-                    <div class="row mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-12">
-                        <p>Similar to what we did with the war genre, we isolated the analysis only with the US and USSR, the problem was that there was very little info in our Dataset regarding movies made in the Soviet Union (Russia, Uzbekistan, Georgia, Armenia, Azerbaijan, and other countries were also taken into consideration). Below we show the graph with the analysis in the US as well as a plot of the amount of movies from the USSR to prove the point of having little data. We can see that the increment in Sci.Fi movies from the US is similar to the overall behavior of this genre. This once again is because the US is the country with most movie releases in the dataset.
-                        </p>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-left" data-aos-delay="200">
-                <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
-                    <div id="thumbnailCarousel6" class="carousel slide">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img src="historicalphotos/pic18.png">
-                        </div>
-                        <div class="carousel-item">
-                          <img src="historicalphotos/pic19.png">
-                        </div>
-                      </div>
-                      <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
-                        <img src="historicalphotos/pic18.png" class="img-thumbnail" data-target="#thumbnailCarousel6" data-slide-to="0" style="width: 100px; cursor: pointer;">
-                        <img src="historicalphotos/pic19.png" class="img-thumbnail" data-target="#thumbnailCarousel6" data-slide-to="1" style="width: 100px; cursor: pointer;">
-                      </div>
-                    </div>
-                  </div>
-        
-              </div>
-
-            </br>
-            <div  data-aos="fade-up">
-                <div class="col-12">
-                    <h3 class="text-black">Trend lines </h3>
-                    <p>To analyze the behavior of Sci-Fi movies during the space race, we employed linear regression to quantify the trend in their production. 
-                        Linear regression is a valuable tool for this analysis as it helps identify and measure the rate of change over time, providing a clearer 
-                        understanding of whether the space race had a noticeable impact on the genre. By focusing on the period immediately preceding the space race 
-                        and its early years (1943–1959), we aimed to capture how external events might have influenced the Sci-Fi genre. 
-                    </p> 
-                    <p>The regression analysis produced a slope of approximately 0.36, indicating a steady upward trend in the production of Sci-Fi movies during this period. 
-                        This positive slope suggests that as interest in space exploration grew, so did the prevalence of Sci-Fi films, reflecting how cultural and scientific 
-                        developments likely influenced the genre. The regression results allow us to draw a more precise connection between the space race and the evolution of Sci-Fi cinema, 
-                        highlighting the importance of quantitative methods in understanding historical influences on film. </p>      
-                    <div class="row mb-5" data-aos="fade-right" data-aos-delay="100">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-center my-4">
-                                <img src="historicalphotos/pic20.png" alt="Exploratory Analysis Results" class="img-fluid">
-                              </div>
-                        </div>
-                      </div>   
-                      
-                    <div class="row mb-5" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-12">
-                        <p>As we can see, a linear regression doesn't match the behaviour of the movie releases during the Space Race period. Therefore, we decided to do a Polynomial regression. As we can see in the graph below, this better fits the percentages of Sci-Fi movies released some years before the Space Race and the Space Race period itself. 
-                        </p>
-                        <p>We obtained a polynomial Function of: 
-                            f(x) = -7395189.624 + 11284.307*x^1 + -5.740*x^2 + 0.001*x^3
-                            </p>
-                    </div>
-                    </div>
-                    <div class="row mb-5" data-aos="fade-left" data-aos-delay="300">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-center my-4">
-                                <img src="historicalphotos/pic21.png" alt="Exploratory Analysis Results" class="img-fluid">
-                              </div>
-                        </div>
-                      </div>   
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="container">
-        <div class="row mb-5" data-aos="fade-up">
-            <div class="col-12">
-                <h3 class="text-black" style="margin-top: 40px; margin-bottom: 10px;">9/11: A Catalyst for Reflection and Resilience</h3>
-
-              <p>For the next analysis, we chose to focus on the event of 9/11, a significant historical moment that has inspired numerous films and documentaries. 
-                Given its profound impact, we will concentrate specifically on the documentary genre.
-              </p> 
-              <p>To better understand the influence of 9/11, we will first examine the global trends in documentary production over time. 
-                Following this, we will narrow our focus to analyze the behavior of this genre specifically within the United States. 
-                This approach will allow us to explore both the worldwide and localized impact of the event on documentary filmmaking.
-            </p> 
-            <p>Below we show both, the overall documentary change over time as well as the change specifically in the US: 
-                </p>            
-          </div>
-        </div>
-
-
-        <div data-aos="fade-right" data-aos-delay="300">
-            <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
-                <div id="thumbnailCarousel8" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="historicalphotos/pic22.png">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="historicalphotos/pic23.png">
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
-                    <img src="historicalphotos/pic22.png" class="img-thumbnail" data-target="#thumbnailCarousel8" data-slide-to="0" style="width: 100px; cursor: pointer;">
-                    <img src="historicalphotos/pic23.png" class="img-thumbnail" data-target="#thumbnailCarousel8" data-slide-to="1" style="width: 100px; cursor: pointer;">
-                  </div>
-                </div>
-              </div>
-          </div>
-
-
-          <div class="row mb-5" data-aos="fade-up">
-            <div class="col-12">
                 
-            <p>We can effectively see that, after 9/11, documentaries experienced a very noticeable increase in percentage in both the world and in the United States, 
-                we can also see that the plot has the same behaviour but if we see closely the percentage amount in the United States is considerably larger than in the world, 
-                it goes up to around 40% where in the world around 28% in its peak.
-                </p>            
-          </div>
+                <p>The comparison of October with other months reveals that October has significantly more horror movie releases than the following months: 
+                February (Month 2), March (Month 3), April (Month 4), May (Month 5), June (Month 6), July (Month 7), August (Month 8), November (Month 11), and 
+                December (Month 12). The p-values for these months are all below the significance threshold, confirming that October sees a notable spike in horror movie 
+                releases, likely due to its connection with Halloween.</p>
+            </div>
         </div>
-
 
 
         <div  data-aos="fade-up">
-            <div class="col-12">
-                <h3 class="text-black">Trend lines </h3>
-                <p>As with the Space Race analysis, we applied both a linear regression and a polynomial regression to examine the trends. 
-                    The linear regression from 1990 to 2009 yielded a slope of 0.541, indicating a steady increase in documentary movies related to 9/11. 
-                    However, the polynomial regression provided a more precise fit, with the function:
-                </p> 
-                <p>f(x) = 187818.534 + -188.447*x^1 + 0.047*x^2  </p>   
-                <p>better capturing the fluctuations in the data over time. This suggests that the polynomial model more accurately reflects the changing dynamics in 
-                    the production of documentary films related to the 9/11 event.</p>   
-                
-                <div data-aos="fade-left" data-aos-delay="300">
-                    <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
-                        <div id="thumbnailCarousel9" class="carousel slide">
-                            <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="historicalphotos/pic24.png">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="historicalphotos/pic25.png">
-                            </div>
-                            </div>
-                            <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
-                            <img src="historicalphotos/pic24.png" class="img-thumbnail" data-target="#thumbnailCarousel9" data-slide-to="0" style="width: 100px; cursor: pointer;">
-                            <img src="historicalphotos/pic25.png" class="img-thumbnail" data-target="#thumbnailCarousel9" data-slide-to="1" style="width: 100px; cursor: pointer;">
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+          <div class="col-12">
+              <p>The analysis reveals no statistically significant correlation between the number of movies released and their revenue, as indicated by a Pearson correlation coefficient 
+                of -0.1488 and a p-value of 0.6443. This suggests that the slight inverse relationship observed is not statistically meaningful. However, a notable spike in both average 
+                revenue and movie count occurs around October 15th, likely driven by the release of a higher number of horror movies on that date. Additionally, there is a gradual increase 
+                in movie releases towards the end of the month as Halloween approaches, confirmed by a positive and statistically significant coefficient in the linear regression analysis. 
+                Below, the plots illustrating these observations are displayed:</p>
+          </div>
+      </div>
 
+
+      <div data-aos="fade-left" data-aos-delay="200">
+        <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
+            <div id="thumbnailCarouselH" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="seasonphotos/pic18.png">
+                </div>
+                <div class="carousel-item">
+                  <img src="seasonphotos/pic19.png">
+                </div>
+                <div class="carousel-item">
+                  <img src="seasonphotos/pic20.png">
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
+                <img src="seasonphotos/pic18.png" class="img-thumbnail" data-target="#thumbnailCarouselH" data-slide-to="0" style="width: 100px; cursor: pointer;">
+                <img src="seasonphotos/pic19.png" class="img-thumbnail" data-target="#thumbnailCarouselH" data-slide-to="1" style="width: 100px; cursor: pointer;">   
+                <img src="seasonphotos/pic20.png" class="img-thumbnail" data-target="#thumbnailCarouselH" data-slide-to="2" style="width: 100px; cursor: pointer;">                  
+              </div>
             </div>
-        </br>
+          </div>
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="temp">
+    <div class="container">
+    <div  data-aos="fade-up">
+        <div class="col-12" style="margin-top: 40px;">
+            <h3 class="text-black">Romantic movies vs Valentine's</h3>
+            <p>For romantic movies around Valentine's Day, we would expect to see a noticeable peak in movie releases and possibly revenue during this period, as romantic films are 
+              often associated with celebrating love and relationships. Valentine's Day, which falls on February 14th, is an ideal time for such releases, as many people look for romantic 
+              films to enjoy with their partners.</p>               
         </div>
     </div>
 
-        <div class="site-section bg-light">
-            <div class="container">
-            <div  data-aos="fade-up">
-                <div class="col-12">
-                <h3>  </h3>
-                    <h3 class="text-black">Sentiment analysis </h3>
-                    <p>The sentiment analysis conducted on movie summaries over time reveals a clear trend in the emotional tone of films. 
-                        Prior to 1910, sentiment data shows some noise, but after this period, movies generally exhibited a positive sentiment. 
-                        However, over time, this sentiment became more negative, stabilizing around zero in the 2010s. The sentiment scores for the entire dataset show a mean of -0.198, 
-                        with a standard deviation of 0.798, indicating a mix of positive and negative sentiments across films.
-                    </p> 
-                    <div class="row mb-5" data-aos="fade-right" data-aos-delay="100">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-center my-4">
-                                <img src="historicalphotos/pic27.png" alt="Exploratory Analysis Results" class="img-fluid">
-                              </div>
-                        </div>
-                      </div>   
-                      
-                    <div class="row mb-5" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-12">
-                        <p>The analysis also identifies how significant historical events impacted the sentiment of movies, particularly during wartime. 
-                            For example, during World War I, there was a notable shift in sentiment, with a significant decrease in sentiment from before to during the war. 
-                            World War II saw a further decline in sentiment, with significant changes before, during, and after the war. The sentiment scores for WWII show that 
-                            before the war, sentiment was slightly negative, but it dropped sharply during and even further after the war, with statistically significant changes in 
-                            sentiment across all periods.
-                        </p>
-                    </div>
-                    </div>
-                    <div class="row mb-5" data-aos="fade-left" data-aos-delay="300">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-center my-4">
-                                <img src="historicalphotos/pic28.png" alt="Exploratory Analysis Results" class="img-fluid">
-                              </div>
-                        </div>
-                      </div> 
-
-                    <div class="row mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-12">
-                        <p>Our analysis of these historical periods shows how filmmakers adapt their stories to reflect the sentiments, fears, and aspirations of the times. 
-                            By looking at trends in genre distribution and thematic focus, we identify clear patterns of how cinema evolves in response to global events, providing 
-                            audiences with both a means to process reality and a way to dream of brighter futures.
-                        </p>
-                    </div>
-                    </div>
-
-                </div>
+    <div class="row mb-5" data-aos="fade-left" data-aos-delay="100">
+      <div class="col-12">
+          <div class="d-flex justify-content-center my-4">
+              <img src="seasonphotos/pic21.png"  class="img-fluid">
             </div>
+      </div>
+    </div>
+
+
+    <div  data-aos="fade-up">
+      <div class="col-12">
+          <p>The t-test results confirm that February doesn't show a clear peak in romantic movie releases compared to other months, with the exception of September (Month 9). 
+            Specifically, the p-value for the comparison between February and September is 0.0037, indicating a statistically significant difference. However, the p-values for 
+            comparisons with other months are all well above the threshold of 0.05, suggesting that February doesn't significantly stand out in terms of romantic movie releases.
+          </p>
+
+            <p>As we suspected, February is not as prominent for romance movies as one might expect, despite its association with Valentine's Day. This finding suggests that 
+              other factors might influence romantic movie releases, or that the genre may be spread out more evenly across the year rather than concentrated around the holiday.
+            </p>
+      </div>
+    </div>
+
+
+    <div data-aos="fade-right" data-aos-delay="200">
+      <div class="d-flex justify-content-center" style="margin-top: 0.5rem;"> <!-- Custom small margin -->
+          <div id="thumbnailCarouselH2" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="seasonphotos/pic22.png">
+              </div>
+              <div class="carousel-item">
+                <img src="seasonphotos/pic23.png">
+              </div>
             </div>
-            
+            <div class="d-flex justify-content-center mt-2"> <!-- Slightly reduced spacing for thumbnails -->
+              <img src="seasonphotos/pic22.png" class="img-thumbnail" data-target="#thumbnailCarouselH2" data-slide-to="0" style="width: 100px; cursor: pointer;">
+              <img src="seasonphotos/pic23.png" class="img-thumbnail" data-target="#thumbnailCarouselH2" data-slide-to="1" style="width: 100px; cursor: pointer;">   
+            </div>
+          </div>
+        </div>
+    </div>
 
+    <div  data-aos="fade-up">
+      <div class="col-12">
+      </br>
+    </br>
+          <p>To evaluate whether the peak around the 22nd of February in average revenue is statistically significant, we can perform a t-test comparing the revenue on 
+            that specific date with the revenue on other dates in February or across different months. The t-test will help us determine if the observed difference in 
+            average revenue is unlikely to have occurred by chance.
+          </p>
 
+          <p class="markdown">Top 4 Days with Highest Average Revenue in Valentine's Week:<br>
+            Comparison of Day 22 with Other Days: p-value = 0.0588095174464923<br>
+            Comparison of Day 5 with Other Days: p-value = 0.5016367644056847<br>
+            Comparison of Day 1 with Other Days: p-value = 0.2477609521288672<br>
+            Comparison of Day 7 with Other Days: p-value = 0.1727987241041169<br>
+            Revenue on the top days is not significantly higher than on other days.<br>
+            </p>
 
+            <p>It seems that, based on the data, romantic movies aren't as heavily concentrated around Valentine's Day as we might have expected. Despite the holiday's strong 
+              association with romance, the data doesn’t show a clear spike in romantic movie releases or revenue during February. Perhaps it reflects changing trends in audience 
+              preferences, where other genres (like action or comedy) may dominate even during traditionally romantic holidays.
+            </p>
+
+          <p>While romance might not be as prevalent in movies around Valentine’s, it doesn’t mean that romantic themes are dead—just that people might be seeking romance in 
+            different forms or genres, such as romantic comedies or even within other genres. Or maybe it is just not concentrated around Valentine’s day, meaning that is always
+             popular no matter what is the time of the year:&#41;.
+          </p>
+      </div>
+    </div>
     
 
   <script src="js/jquery-3.3.1.min.js"></script>
