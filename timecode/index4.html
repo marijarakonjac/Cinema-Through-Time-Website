@@ -138,7 +138,7 @@
               <div class="col-7 text-center mb-5">
                   <p class="lead">Seasonal changes, along with the cultural significance of holidays throughout the year, have profoundly shaped the way societies celebrate, reflect, and connect through storytelling. 
                     By examining the evolution of seasonal trends and the influence of holidays, we aim to uncover how different times of the year, from spring renewal to winter nostalgia, and holidays such as Halloween, Christmas, and Valentine's, shape cinematic themes and audience preferences. 
-                    In this section, we explore these seasonal and holiday influences, delving into hovw they inspire filmmakers to craft narratives that resonate with the rhythms of the year.
+                    In this section, we explore these seasonal and holiday influences, delving into how they inspire filmmakers to craft narratives that resonate with the rhythms of the year.
                 </p>
               </div>
           </div>
@@ -166,10 +166,8 @@
 
           <div class="row mb-5" data-aos="fade-up">
             <div class="col-12">
-              <p>Autumn and winter are popular seasons for movie releases, but each season brings unique trends in revenue, popularity, budget, and runtime. 
-                For instance, while summer movies earn the most revenue, they are surprisingly the least common season for releases. These patterns raise intriguing 
-                questions: Are summer movies typically blockbusters with bigger budgets? Does runtime or indie popularity vary across seasons? Dive into the insights 
-                below to explore the fascinating connections between seasons and cinema.
+              <p>Autumn and winter emerge as favorite seasons for movie releases, but do films released during these periods differ in revenue, popularity, budget, or runtime? 
+                And what about genre—are certain genres more common in specific seasons? We set out to find the answers.
               </p>         
           </div>
         </div>
@@ -207,6 +205,15 @@
   
         </div>
 
+        <div class="row mb-5" data-aos="fade-up">
+            <div class="col-12">
+              <p>Autumn and winter are popular seasons for movie releases, but each season brings unique trends in revenue, popularity, budget, and runtime. 
+                For instance, while summer movies earn the most revenue, they are surprisingly the least common season for releases. These patterns raise intriguing 
+                questions: Are summer movies typically blockbusters with bigger budgets? Does runtime or indie popularity vary across seasons? Dive into the insights 
+                above to explore the fascinating connections between seasons and cinema.
+              </p>         
+          </div>
+        </div>
 
 
       <div class="row mb-5" data-aos="fade-up">
@@ -218,10 +225,11 @@
               However, we also want to know: what are the most popular genres in each season? By diving deeper into seasonal trends, we can uncover how genres fluctuate in 
               popularity throughout the year, offering a richer perspective on how audience preferences and seasonal timing influence cinematic success.
             </p>    
-            <p>To dive deeper, the 
-              first visualization in the carousel shows how genres are distributed across seasons in terms of the number of movies. Complementing this, the second slide provides 
-              a table representation of the same data for easier comparison. Finally, the third graph zooms in on the top 10 most popular genres, highlighting their seasonal 
-              dominance. Take a look at the carousel below to explore the data:</p>     
+            <p>
+              Let’s take a closer look at how genres vary across seasons. The first slide in the carousel shows how genres are distributed based on the number of movies released
+              each season. To make it even easier to compare, the second slide presents the same data in a table format. Finally, the third visualization zooms in on the top 10 most
+              popular genres, highlighting their dominance in each season. Explore the carousel above to uncover these patterns!
+            </p>     
         </div>
       </div>
 
@@ -321,7 +329,12 @@
                   <p>The R-squared value of 0.004 means that season explains only 0.4% of the popularity variance, highlighting that factors like marketing and content quality are 
                     likely more influential.</p>    
                 <p>After reviewing how the season affects revenue and popularity, we would like to delve deeper into genres. Are certain genres more frequently released in certain seasons? 
-                  Let's investigate this!</p>
+                  To answer this, we’ll use t-statistics to test whether there’s a significant relationship between the season of release and the genre of movies.</p>
+                <p>
+                  T-statistics help us assess whether the differences we observe in our data are statistically significant or if they might have occurred by chance. In simple terms, it’s like
+                  looking at a movie’s rough cut—t-statistics help us determine whether the trends we see are solid enough to make it into the final script or if they need more editing. 
+                  By analyzing the t-statistic and p-value, we’ll uncover whether the season truly impacts which genres hit the screen most frequently.
+                </p>
                 <p class="markdown">T-statistic: 0.827878259701446, p-value: 0.4079757121240083</p>        
               </div>
           </div>
@@ -376,12 +389,14 @@
         <div class="col-12">
         </br>
       </br>
-          <p>What can easily catch our eye is that Fantasy and Science fiction movies have way bigger average revenue in spring, comparing to other seasons. Why is that? Let's test it first:</p> 
+          <p>What can easily catch our eye is that Fantasy and Science fiction movies have way bigger average revenue in spring, comparing to other seasons. Why is that? Let’s test this hypothesis using t-statistics:</p> 
           <p class="markdown">T-statistic: 0.827878259701446, p-value: 0.4079757121240083</p> 
           <p>T-statistic (0.83): The T-statistic measures the size of the difference relative to the variation in your sample data. A value close to 0 indicates that there is 
             little difference between the two groups.</p>
-          <p>p-value (0.41): The p-value tells you the probability of observing the data if the null hypothesis (no difference between the groups) were true. 
-            Since the p-value is greater than 0.05, we fail to reject the null hypothesis at a 5% significance level.</p>
+          <p>p-value (0.41):The p-value tells us the probability of observing the data if the null hypothesis (that there is no difference between the groups) were true. Since the p-value is greater than 0.05, we fail to reject 
+            the null hypothesis at the 5% significance level, suggesting that the observed difference in revenue is not statistically significant. This means that while the trend is noticeable, the data doesn’t provide strong enough 
+            evidence to confirm a significant impact of season on Fantasy and Science Fiction movie revenue.
+          </p>
         </div>
       </div>
       </div>
@@ -401,11 +416,10 @@
                       </div>
                 </div>
               </div>  
-              <p>The regression model aimed to analyze how genre and season affect movie revenue, with an R-squared value of 0.028, indicating a weak explanatory power. 
-                The results revealed that spring and summer seasons significantly impact revenue, particularly for genres like Family, Fantasy, and Adventure. 
-                Notable coefficients include higher revenues for Family and Fantasy genres across seasons, and some negative impacts in genres like Horror, Drama, 
-                and Musical during certain seasons. However, most interactions between genres and seasons, such as those for Comedy, Crime, and Documentary, showed insignificant effects, 
-                with p-values above the typical threshold of 0.05.</p> 
+              <p>The regression model we used aimed to explore how genres and seasons influence movie revenue, with an R-squared value of 0.028. This suggests that the model has weak explanatory power, meaning it only accounts for a small portion of the revenue variability.
+                Despite this, the results highlighted a few key trends. The spring and summer seasons notably influenced revenue, particularly for genres like Family, Fantasy, and Adventure. The model also showed that Family and Fantasy genres generally enjoy higher revenues across seasons,
+                while genres such as Horror, Drama, and Musical experienced some negative impacts during certain seasons. However, when looking at the interactions between genres and seasons—such as for Comedy, Crime, and Documentary—the effects were largely insignificant, 
+                with p-values above the typical 0.05 threshold, suggesting no strong seasonal influence on these genres.</p> 
             </div>
         </div>
       </div>
